@@ -178,7 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
             
             // Soft violet glow fill
-            ctx.fillStyle = `rgba(139, 92, 246, ${this.alpha})`;
+            ctx.fillStyle = `rgba(124, 58, 237, ${this.alpha})`;
             ctx.shadowBlur = this.size * 5;
             ctx.shadowColor = 'var(--violet)';
             ctx.fill();
@@ -197,21 +197,21 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Redraw dark gradient backdrop
         const grad = ctx.createRadialGradient(width/2, height/2, 10, width/2, height/2, Math.max(width, height));
-        grad.addColorStop(0, '#0a0910');
-        grad.addColorStop(1, '#050508');
+        grad.addColorStop(0, '#fdfcff');
+        grad.addColorStop(1, '#ede9fe');
         ctx.fillStyle = grad;
         ctx.fillRect(0, 0, width, height);
 
         // Draw HUD ambient lighting overlays in top-right and bottom-left
         ctx.beginPath();
         ctx.arc(width, 0, 400, 0, Math.PI*2);
-        ctx.fillStyle = 'rgba(139, 92, 246, 0.02)';
+        ctx.fillStyle = 'rgba(124, 58, 237, 0.04)';
         ctx.filter = 'blur(100px)';
         ctx.fill();
 
         ctx.beginPath();
         ctx.arc(0, height, 400, 0, Math.PI*2);
-        ctx.fillStyle = 'rgba(6, 182, 212, 0.02)';
+        ctx.fillStyle = 'rgba(167, 139, 250, 0.05)';
         ctx.fill();
         ctx.filter = 'none';
 

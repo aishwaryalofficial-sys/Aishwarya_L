@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Futuristic ECE Portfolio of Aishwarya L - Electronics and Communication Engineering Student specializing in Embedded Systems, IoT, and Edge AI.">
+        content="Futuristic Portfolio of Aishwarya L - Electronics and Communication Engineering Student specializing in Embedded Systems, IoT, and Edge AI.">
     <meta name="keywords"
         content="Aishwarya L, Portfolio, ECE, Electronics and Communication Engineering, Embedded Systems, IoT, TinyML, Arduino, Salem Steel Plant, SONA College of Technology">
     <meta name="author" content="Aishwarya L">
-    <title>Aishwarya L // ECE Portfolio</title>
+    <title>Aishwarya L // Portfolio</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,6 +24,15 @@
 
 <body>
 
+    <!-- Intro Slide Preloader -->
+    <div id="intro-slide">
+        <canvas id="glitters-canvas"></canvas>
+        <div class="intro-content">
+            <h1 class="intro-text">Glad to have you here!</h1>
+            <div class="intro-hud">> SYSTEM INITIALIZING...</div>
+        </div>
+    </div>
+
     <!-- Canvas Background for Violet Sparks -->
     <canvas id="sparks-canvas"></canvas>
 
@@ -36,7 +45,7 @@
             <span class="logo-bracket">[</span>
             <span class="logo-text">AISHWARYA.L</span>
             <span class="logo-divider">//</span>
-            <span class="logo-subtitle">ECE</span>
+            <span class="logo-subtitle">PORTFOLIO</span>
             <span class="logo-bracket">]</span>
         </div>
 
@@ -269,7 +278,7 @@
             <div class="skills-grid">
 
                 <!-- Skill: C -->
-                <div class="skill-icon-card glass-card float-anim-1">
+                <div class="skill-icon-card glass-card float-anim-1 skill-c">
                     <div class="skill-glow violet"></div>
                     <svg class="skill-svg" viewBox="0 0 100 100">
                         <circle cx="50" cy="50" r="40" fill="none" stroke="rgba(139, 92, 246, 0.15)" stroke-width="2" />
@@ -282,7 +291,7 @@
                 </div>
 
                 <!-- Skill: Python -->
-                <div class="skill-icon-card glass-card float-anim-2">
+                <div class="skill-icon-card glass-card float-anim-2 skill-python">
                     <div class="skill-glow cyan"></div>
                     <svg class="skill-svg" viewBox="0 0 100 100">
                         <path
@@ -298,7 +307,7 @@
                 </div>
 
                 <!-- Skill: HTML -->
-                <div class="skill-icon-card glass-card float-anim-3">
+                <div class="skill-icon-card glass-card float-anim-3 skill-html">
                     <div class="skill-glow violet"></div>
                     <svg class="skill-svg" viewBox="0 0 100 100">
                         <path d="M 25,30 L 75,30 L 70,75 L 50,85 L 30,75 Z" fill="none" stroke="var(--violet)"
@@ -310,7 +319,7 @@
                 </div>
 
                 <!-- Skill: CSS -->
-                <div class="skill-icon-card glass-card float-anim-4">
+                <div class="skill-icon-card glass-card float-anim-4 skill-css">
                     <div class="skill-glow cyan"></div>
                     <svg class="skill-svg" viewBox="0 0 100 100">
                         <path d="M 25,30 L 75,30 L 70,75 L 50,85 L 30,75 Z" fill="none" stroke="var(--cyan)"
@@ -322,7 +331,7 @@
                 </div>
 
                 <!-- Skill: Arduino -->
-                <div class="skill-icon-card glass-card float-anim-1">
+                <div class="skill-icon-card glass-card float-anim-1 skill-arduino">
                     <div class="skill-glow violet"></div>
                     <svg class="skill-svg" viewBox="0 0 100 100">
                         <path
@@ -336,7 +345,7 @@
                 </div>
 
                 <!-- Skill: MATLAB -->
-                <div class="skill-icon-card glass-card float-anim-2">
+                <div class="skill-icon-card glass-card float-anim-2 skill-matlab">
                     <div class="skill-glow cyan"></div>
                     <svg class="skill-svg" viewBox="0 0 100 100">
                         <path d="M 15,75 Q 35,15 45,65 T 75,35 T 85,85" fill="none" stroke="var(--cyan)"
@@ -350,7 +359,7 @@
                 </div>
 
                 <!-- Skill: VS Code -->
-                <div class="skill-icon-card glass-card float-anim-3">
+                <div class="skill-icon-card glass-card float-anim-3 skill-vscode">
                     <div class="skill-glow violet"></div>
                     <svg class="skill-svg" viewBox="0 0 100 100">
                         <path d="M 20,35 L 70,15 L 85,25 L 85,75 L 70,85 L 20,65 L 45,50 Z" fill="none"
@@ -362,7 +371,7 @@
                 </div>
 
                 <!-- Skill: Git -->
-                <div class="skill-icon-card glass-card float-anim-4">
+                <div class="skill-icon-card glass-card float-anim-4 skill-git">
                     <div class="skill-glow cyan"></div>
                     <svg class="skill-svg" viewBox="0 0 100 100">
                         <path d="M 50,15 L 85,50 L 50,85 L 15,50 Z" fill="none" stroke="var(--cyan)" stroke-width="4" />
@@ -376,7 +385,7 @@
                 </div>
 
                 <!-- Skill: TinkerCad -->
-                <div class="skill-icon-card glass-card float-anim-1">
+                <div class="skill-icon-card glass-card float-anim-1 skill-tinkercad">
                     <div class="skill-glow violet"></div>
                     <svg class="skill-svg" viewBox="0 0 100 100">
                         <rect x="25" y="25" width="50" height="50" rx="8" fill="none" stroke="var(--violet)"
@@ -389,7 +398,7 @@
                 </div>
 
                 <!-- Skill: Canva -->
-                <div class="skill-icon-card glass-card float-anim-2">
+                <div class="skill-icon-card glass-card float-anim-2 skill-canva">
                     <div class="skill-glow cyan"></div>
                     <svg class="skill-svg" viewBox="0 0 100 100">
                         <path d="M 25,50 A 25,25 0 1,1 75,50 A 25,25 0 1,1 25,50" fill="none" stroke="var(--cyan)"
@@ -401,7 +410,7 @@
                 </div>
 
                 <!-- Skill: MS Excel -->
-                <div class="skill-icon-card glass-card float-anim-3">
+                <div class="skill-icon-card glass-card float-anim-3 skill-excel">
                     <div class="skill-glow violet"></div>
                     <svg class="skill-svg" viewBox="0 0 100 100">
                         <rect x="20" y="20" width="60" height="60" rx="5" fill="none" stroke="var(--violet)"
@@ -475,7 +484,10 @@
                 <div class="cyber-corner bottom-right"></div>
 
                 <div class="dashboard-header">
-                    <div class="dash-inst-title">Salem Steel Plant (SAIL)</div>
+                    <div class="dash-inst-wrapper">
+                        <img src="images/sail_logo.png" alt="SAIL Logo" class="sail-logo">
+                        <div class="dash-inst-title">Salem Steel Plant (SAIL)</div>
+                    </div>
                     <div class="dash-badge blink">SYSTEM: INDUSTRIAL MAINTENANCE ACTIVE</div>
                 </div>
 
@@ -776,42 +788,42 @@
                     <span class="cert-decor">VERIFIED SECURE // ID_COM_881</span>
                 </div>
 
-                <!-- Cert 4: Drone Workshop -->
+                <!-- Cert 4: MATLAB Image Processing Onramp -->
                 <div class="cert-card glass-card hover-glow">
                     <div class="cyber-corner bottom-right"></div>
-                    <div class="cert-badge">AVIONICS</div>
-                    <h3 class="cert-title">Autonomous Drone Technology Workshop</h3>
-                    <p class="cert-issuer">Aerospace & Avionics Lab</p>
+                    <div class="cert-badge">MATLAB</div>
+                    <h3 class="cert-title">MATLAB Image Processing Onramp</h3>
+                    <p class="cert-issuer">MathWorks</p>
 
                     <div class="cert-image-container">
-                        <img src="cert_drone.jpg" alt="Drone Workshop Certificate" class="cert-preview-img"
+                        <img src="images/matlab_image_processing_onramp.jpeg" alt="MATLAB Image Processing Onramp Certificate" class="cert-preview-img"
                             onload="this.nextElementSibling.style.display='none';" onerror="this.style.display='none';">
                         <div class="cert-placeholder-hud">
                             <span class="hud-status-text">NO COMPILATION DETECTED</span>
-                            <span class="hud-action-text">[ Drop file: cert_drone.jpg ]</span>
+                            <span class="hud-action-text">[ Drop file: cert_matlab_ip.jpg ]</span>
                         </div>
                     </div>
 
-                    <span class="cert-decor">VERIFIED SECURE // ID_DRN_303</span>
+                    <span class="cert-decor">VERIFIED SECURE // ID_MAT_IP0</span>
                 </div>
 
-                <!-- Cert 5: Robotics Workshop -->
+                <!-- Cert 5: MATLAB Deep Learning Onramp -->
                 <div class="cert-card glass-card hover-glow">
                     <div class="cyber-corner top-left"></div>
-                    <div class="cert-badge">ROBOTICS</div>
-                    <h3 class="cert-title">Robotics & Embedded Automation Workshop</h3>
-                    <p class="cert-issuer">ECE Robotics Society</p>
+                    <div class="cert-badge">MATLAB</div>
+                    <h3 class="cert-title">MATLAB Deep Learning Onramp</h3>
+                    <p class="cert-issuer">MathWorks</p>
 
                     <div class="cert-image-container">
-                        <img src="cert_robotics.jpg" alt="Robotics Workshop Certificate" class="cert-preview-img"
+                        <img src="images/matlab_deep_learning_onramp.jpeg" alt="MATLAB Deep Learning Onramp Certificate" class="cert-preview-img"
                             onload="this.nextElementSibling.style.display='none';" onerror="this.style.display='none';">
                         <div class="cert-placeholder-hud">
                             <span class="hud-status-text">NO COMPILATION DETECTED</span>
-                            <span class="hud-action-text">[ Drop file: cert_robotics.jpg ]</span>
+                            <span class="hud-action-text">[ Drop file: cert_matlab_dl.jpg ]</span>
                         </div>
                     </div>
 
-                    <span class="cert-decor">VERIFIED SECURE // ID_ROB_502</span>
+                    <span class="cert-decor">VERIFIED SECURE // ID_MAT_DL0</span>
                 </div>
 
                 <!-- Cert 6: Revit Architecture -->
@@ -939,27 +951,9 @@
                     <div class="cyber-corner bottom-right"></div>
 
                     <h3 class="contact-subtitle">> COMMUNICATIVE TRANSCIEVER</h3>
-                    <p class="contact-lead">Establish a direct line of communication for internship inquiries, project
-                        collaboration, or hardware consulting.</p>
+                    <p class="contact-lead">Iam open to internship opportunities,collaborative projects and Profesional conversations. Feel free to reach out throught any of the channels below</p>
 
                     <div class="contact-channels">
-                        <div class="channel-item">
-                            <span class="channel-icon">📧</span>
-                            <div class="channel-details">
-                                <span class="channel-label">EMAIL FEED:</span>
-                                <a href="mailto:aishwaryalofficial@gmail.com"
-                                    class="channel-link">aishwaryalofficial@gmail.com</a>
-                            </div>
-                        </div>
-
-                        <div class="channel-item">
-                            <span class="channel-icon">📞</span>
-                            <div class="channel-details">
-                                <span class="channel-label">PHONE BAND:</span>
-                                <a href="tel:+91 99448 50674" class="channel-link">+91 99448 50674</a>
-                            </div>
-                        </div>
-
                         <div class="channel-item">
                             <span class="channel-icon">🔗</span>
                             <div class="channel-details">
@@ -975,6 +969,23 @@
                                 <span class="channel-label">GITHUB REPO:</span>
                                 <a href="https://github.com/aishwarya-l-ece" target="_blank" rel="noopener noreferrer"
                                     class="channel-link">github.com/aishwarya-l-ece</a>
+                            </div>
+                        </div>
+
+                        <div class="channel-item">
+                            <span class="channel-icon">📞</span>
+                            <div class="channel-details">
+                                <span class="channel-label">PHONE BAND:</span>
+                                <a href="tel:+91 99448 50674" class="channel-link">+91 99448 50674</a>
+                            </div>
+                        </div>
+
+                        <div class="channel-item">
+                            <span class="channel-icon">📧</span>
+                            <div class="channel-details">
+                                <span class="channel-label">EMAIL FEED:</span>
+                                <a href="mailto:aishwaryalofficial@gmail.com"
+                                    class="channel-link">aishwaryalofficial@gmail.com</a>
                             </div>
                         </div>
                     </div>

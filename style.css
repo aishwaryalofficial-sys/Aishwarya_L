@@ -4,27 +4,27 @@
 
 /* Design Tokens & Variables */
 :root {
-    --bg-deep-black: #060609;
-    --bg-dark-gray: #0f0f15;
-    --bg-card: rgba(15, 15, 22, 0.65);
+    --bg-deep-black: #f5f3ff;
+    --bg-dark-gray: #ede9fe;
+    --bg-card: rgba(255, 255, 255, 0.75);
 
     /* Neon Glo Colors */
-    --violet: #8b5cf6;
-    --cyan: #06b6d4;
-    --violet-glow: rgba(139, 92, 246, 0.45);
-    --cyan-glow: rgba(6, 182, 212, 0.45);
+    --violet: #7c3aed;
+    --cyan: #a78bfa;
+    --violet-glow: rgba(124, 58, 237, 0.25);
+    --cyan-glow: rgba(167, 139, 250, 0.25);
 
     /* Text Colors */
-    --text-primary: #f3f4f6;
-    --text-secondary: #a3a3ac;
-    --text-muted: #6b7280;
-    --violet-text: #c084fc;
-    --cyan-text: #22d3ee;
+    --text-primary: #2e1065;
+    --text-secondary: #5b21b6;
+    --text-muted: #7c3aed;
+    --violet-text: #6d28d9;
+    --cyan-text: #7c3aed;
 
     /* Borders & Accents */
-    --border-color: rgba(255, 255, 255, 0.07);
-    --border-hover-violet: rgba(139, 92, 246, 0.35);
-    --border-hover-cyan: rgba(6, 182, 212, 0.35);
+    --border-color: rgba(124, 58, 237, 0.15);
+    --border-hover-violet: rgba(124, 58, 237, 0.4);
+    --border-hover-cyan: rgba(167, 139, 250, 0.45);
 
     /* Transition benchmarks */
     --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
@@ -64,7 +64,7 @@ body {
     height: 100vh;
     z-index: -10;
     pointer-events: none;
-    background: radial-gradient(circle at 50% 50%, #0d0b14 0%, #060609 100%);
+    background: radial-gradient(circle at 50% 50%, #fcfaff 0%, #ede9fe 100%);
 }
 
 /* Custom Interactive Cursor Glow */
@@ -72,7 +72,7 @@ body {
     position: fixed;
     width: 300px;
     height: 300px;
-    background: radial-gradient(circle, rgba(139, 92, 246, 0.12) 0%, rgba(6, 182, 212, 0.06) 50%, transparent 70%);
+    background: radial-gradient(circle, rgba(124, 58, 237, 0.15) 0%, rgba(167, 139, 250, 0.08) 50%, transparent 70%);
     border-radius: 50%;
     pointer-events: none;
     transform: translate(-50%, -50%);
@@ -209,10 +209,10 @@ a {
     left: 0;
     width: 100%;
     z-index: 100;
-    background: rgba(6, 6, 9, 0.7);
+    background: rgba(245, 243, 255, 0.85);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(124, 58, 237, 0.1);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -228,19 +228,19 @@ a {
 }
 
 .logo-bracket {
-    color: var(--cyan);
+    color: var(--violet);
     font-weight: 900;
 }
 
 .logo-text {
-    background: linear-gradient(135deg, var(--text-primary) 30%, var(--cyan) 100%);
+    background: linear-gradient(135deg, var(--text-primary) 30%, var(--violet) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     padding: 0 0.2rem;
 }
 
 .logo-divider {
-    color: var(--violet);
+    color: var(--cyan);
     margin: 0 0.3rem;
     opacity: 0.6;
 }
@@ -784,6 +784,99 @@ a {
     margin-bottom: 2rem;
 }
 
+/* Skill Graduation Cap shape Grid Styling */
+@media (min-width: 769px) {
+    .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(5, auto);
+        gap: 2rem 1.5rem;
+        max-width: 900px;
+        margin: 4rem auto 0 auto;
+        position: relative;
+    }
+
+    /* Connection lines or visual guide behind cap elements */
+    .skills-grid::before {
+        content: '';
+        position: absolute;
+        top: 20%;
+        left: 20%;
+        width: 60%;
+        height: 48%;
+        border: 2px dashed rgba(124, 58, 237, 0.15);
+        transform: rotate(45deg);
+        pointer-events: none;
+        z-index: 0;
+    }
+
+    .skill-c {
+        grid-column: 3;
+        grid-row: 1;
+        z-index: 2;
+    }
+
+    .skill-python {
+        grid-column: 2;
+        grid-row: 2;
+        z-index: 2;
+    }
+
+    .skill-html {
+        grid-column: 3;
+        grid-row: 2;
+        z-index: 2;
+    }
+
+    .skill-css {
+        grid-column: 4;
+        grid-row: 2;
+        z-index: 2;
+    }
+
+    .skill-tinkercad {
+        grid-column: 1;
+        grid-row: 3;
+        z-index: 2;
+    }
+
+    .skill-arduino {
+        grid-column: 3;
+        grid-row: 3;
+        z-index: 2;
+    }
+
+    .skill-canva {
+        grid-column: 1;
+        grid-row: 4;
+        z-index: 2;
+    }
+
+    .skill-matlab {
+        grid-column: 2;
+        grid-row: 4;
+        z-index: 2;
+    }
+
+    .skill-vscode {
+        grid-column: 3;
+        grid-row: 4;
+        z-index: 2;
+    }
+
+    .skill-git {
+        grid-column: 4;
+        grid-row: 4;
+        z-index: 2;
+    }
+
+    .skill-excel {
+        grid-column: 1;
+        grid-row: 5;
+        z-index: 2;
+    }
+}
+
 .skill-icon-card {
     display: flex;
     flex-direction: column;
@@ -791,7 +884,7 @@ a {
     justify-content: center;
     padding: 1.5rem 1rem;
     text-align: center;
-    border-color: rgba(255, 255, 255, 0.04);
+    border-color: rgba(124, 58, 237, 0.12);
 }
 
 .skill-svg {
@@ -991,9 +1084,9 @@ a {
 
 /* Flagship Project layout */
 .flagship-project {
-    border-color: rgba(139, 92, 246, 0.25);
-    background: linear-gradient(135deg, rgba(17, 17, 22, 0.8) 0%, rgba(26, 20, 42, 0.4) 100%);
-    box-shadow: 0 10px 40px rgba(139, 92, 246, 0.08);
+    border-color: rgba(124, 58, 237, 0.25);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.85) 0%, rgba(245, 243, 255, 0.7) 100%);
+    box-shadow: 0 10px 40px rgba(124, 58, 237, 0.08);
 }
 
 .flagship-header {
@@ -1060,10 +1153,9 @@ a {
     margin-top: 0.2rem;
 }
 
-/* Oscilloscope Mock Panel */
 .oscilloscope-wrapper {
-    background: #09090e;
-    border: 2px solid #1f1f2e;
+    background: #1e1b4b;
+    border: 2px solid rgba(124, 58, 237, 0.25);
     border-radius: 8px;
     overflow: hidden;
     margin-bottom: 1.5rem;
@@ -1071,18 +1163,18 @@ a {
 }
 
 .scope-header {
-    background: #14141e;
+    background: #141233;
     padding: 0.5rem 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #1f1f2e;
+    border-bottom: 1px solid rgba(124, 58, 237, 0.15);
 }
 
 .scope-title {
     font-size: 0.75rem;
     letter-spacing: 1px;
-    color: var(--text-muted);
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .scope-freq {
@@ -1094,7 +1186,7 @@ a {
 #oscilloscope-canvas {
     display: block;
     width: 100%;
-    background: #050508;
+    background: #121026;
     height: 160px;
 }
 
@@ -1161,10 +1253,9 @@ a {
     text-shadow: 0 0 5px rgba(239, 68, 68, 0.4);
 }
 
-/* Internship Section Dashboard Style */
 .internship-dashboard {
-    border-color: rgba(6, 182, 212, 0.25);
-    background: linear-gradient(135deg, rgba(15, 15, 22, 0.85) 0%, rgba(10, 20, 26, 0.6) 100%);
+    border-color: rgba(124, 58, 237, 0.25);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.85) 0%, rgba(245, 243, 255, 0.7) 100%);
 }
 
 .dashboard-header {
@@ -1183,6 +1274,23 @@ a {
     font-size: 1.4rem;
     font-weight: 800;
     color: var(--text-primary);
+}
+
+.dash-inst-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.sail-logo {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    border-radius: 6px;
+    border: 1px solid rgba(124, 58, 237, 0.2);
+    background: #ffffff;
+    padding: 4px;
+    box-shadow: 0 0 10px rgba(124, 58, 237, 0.15);
 }
 
 .dash-badge {
@@ -1226,7 +1334,7 @@ a {
     left: 50%;
     width: 200px;
     height: 200px;
-    background: conic-gradient(from 0deg, rgba(6, 182, 212, 0.25), transparent 40%);
+    background: conic-gradient(from 0deg, rgba(124, 58, 237, 0.25), transparent 40%);
     transform-origin: 0 0;
     transform: translate(-50%, -50%);
     animation: rotateClockwise 6s linear infinite;
@@ -1324,24 +1432,24 @@ a {
 }
 
 .cert-card {
-    border-color: rgba(255, 255, 255, 0.04);
-    padding: 1rem;
+    border-color: rgba(124, 58, 237, 0.15);
+    padding: 1.2rem;
 }
 
 .cert-card:hover {
     border-color: var(--border-hover-violet);
-    box-shadow: 0 5px 20px rgba(139, 92, 246, 0.15);
+    box-shadow: 0 5px 20px rgba(124, 58, 237, 0.15);
 }
 
 .cert-badge {
     font-size: 0.75rem;
     color: var(--violet-text);
-    background: rgba(139, 92, 246, 0.08);
-    border: 1px solid rgba(139, 92, 246, 0.15);
+    background: rgba(124, 58, 237, 0.08);
+    border: 1px solid rgba(124, 58, 237, 0.15);
     padding: 0.15rem 0.5rem;
     border-radius: 4px;
     display: inline-block;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1rem;
 }
 
 .cert-title {
@@ -1354,7 +1462,59 @@ a {
 .cert-issuer {
     color: var(--text-secondary);
     font-size: 0.9rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.cert-image-container {
+    width: 100%;
+    height: 160px;
+    border-radius: 6px;
+    overflow: hidden;
+    margin: 1rem 0;
+    position: relative;
+    border: 1px solid rgba(124, 58, 237, 0.12);
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.cert-preview-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: rgba(124, 58, 237, 0.03);
+    transition: transform var(--transition-normal);
+}
+
+.cert-card:hover .cert-preview-img {
+    transform: scale(1.05);
+}
+
+.cert-placeholder-hud {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px dashed rgba(124, 58, 237, 0.2);
+    border-radius: 6px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.hud-status-text {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    letter-spacing: 1px;
+    margin-bottom: 0.3rem;
+}
+
+.hud-action-text {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.75rem;
+    color: var(--violet);
+    font-weight: 700;
 }
 
 .cert-decor {
@@ -1362,7 +1522,7 @@ a {
     color: var(--text-muted);
     letter-spacing: 1px;
     display: block;
-    border-top: 1px solid rgba(255, 255, 255, 0.04);
+    border-top: 1px solid rgba(124, 58, 237, 0.12);
     padding-top: 0.8rem;
 }
 
@@ -1947,5 +2107,100 @@ textarea.form-input {
 
     .form-submit {
         align-self: stretch;
+    }
+}
+
+/* Click Flash Effect */
+.click-flash {
+    position: fixed;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(124, 58, 237, 0.75) 0%, rgba(91, 33, 182, 0.35) 45%, transparent 70%);
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    animation: flashRipple 0.55s cubic-bezier(0.1, 0.8, 0.2, 1) forwards;
+    z-index: 99999;
+}
+
+@keyframes flashRipple {
+    0% {
+        width: 0px;
+        height: 0px;
+        opacity: 1;
+    }
+    100% {
+        width: 200px;
+        height: 200px;
+        opacity: 0;
+    }
+}
+
+/* Welcome Preloader Splash Slide */
+#intro-slide {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #040406; /* Dark black background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999999; /* Overrides everything */
+    opacity: 1;
+    transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1), transform 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#intro-slide.fade-out {
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(1.05);
+}
+
+#glitters-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.intro-content {
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+.intro-text {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.8rem;
+    color: #4c1d95; /* Dark violet */
+    text-shadow: 0 0 15px rgba(124, 58, 237, 0.6);
+    margin-bottom: 1rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards 0.3s;
+    letter-spacing: 2px;
+}
+
+.intro-hud {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.95rem;
+    color: #7c3aed;
+    letter-spacing: 4px;
+    opacity: 0;
+    animation: fadeIn 0.8s ease forwards 1s, pulse 1.5s infinite 1.8s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 0.7;
     }
 }
