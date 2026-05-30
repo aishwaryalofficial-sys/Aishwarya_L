@@ -1,10 +1,23 @@
 window.addEventListener("load", () => {
+
+    const message = new SpeechSynthesisUtterance(
+        "Glad to have you here"
+    );
+
+    message.rate = 0.9;
+    message.pitch = 1.3;
+    message.volume = 1;
+
+    speechSynthesis.speak(message);
+
     setTimeout(() => {
         const welcomeScreen = document.getElementById("welcome-screen");
+
         if (welcomeScreen) {
             welcomeScreen.style.display = "none";
         }
     }, 4000);
+
 });
 
 /* ==========================================================================

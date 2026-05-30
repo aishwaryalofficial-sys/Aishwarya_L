@@ -2206,39 +2206,78 @@ textarea.form-input {
 }
 #welcome-screen {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
+    inset: 0;
+    z-index: 99999;
+    overflow: hidden;
+
     background:
-        radial-gradient(circle at 20% 20%, #8a2be2 0%, transparent 10%),
-        radial-gradient(circle at 80% 30%, #9932cc 0%, transparent 12%),
-        radial-gradient(circle at 60% 70%, #9370db 0%, transparent 10%),
-        #000;
+        radial-gradient(circle at 15% 20%, rgba(168,85,247,0.8) 0 2px, transparent 3px),
+        radial-gradient(circle at 80% 25%, rgba(192,132,252,0.9) 0 2px, transparent 3px),
+        radial-gradient(circle at 65% 75%, rgba(139,92,246,0.8) 0 3px, transparent 4px),
+        radial-gradient(circle at 30% 60%, rgba(167,139,250,0.7) 0 2px, transparent 3px),
+        radial-gradient(circle at 90% 80%, rgba(216,180,254,0.8) 0 2px, transparent 3px),
+        linear-gradient(to bottom, #020204, #050510, #000000);
+
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 99999;
+}
+
+#welcome-screen::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        radial-gradient(2px 2px at 20% 30%, #c084fc, transparent),
+        radial-gradient(2px 2px at 40% 70%, #a855f7, transparent),
+        radial-gradient(2px 2px at 70% 40%, #d8b4fe, transparent),
+        radial-gradient(2px 2px at 85% 15%, #9333ea, transparent),
+        radial-gradient(2px 2px at 10% 85%, #c084fc, transparent),
+        radial-gradient(3px 3px at 55% 20%, #a855f7, transparent);
+
+    animation: twinkle 2s infinite alternate;
 }
 
 #welcome-screen h1 {
-    color: #c084fc;
-    font-size: 4rem;
+    position: relative;
+    z-index: 2;
+
+    font-size: 4.5rem;
+    font-weight: 800;
+    color: #d8b4fe;
+
     text-shadow:
         0 0 10px #c084fc,
         0 0 20px #a855f7,
-        0 0 40px #9333ea;
-    animation: airplaneFly 4s ease forwards;
+        0 0 40px #9333ea,
+        0 0 80px #7e22ce;
+
+    animation: flySpace 4s ease-out forwards;
 }
 
-@keyframes airplaneFly {
-    from {
-        transform: translateX(-120vw);
+@keyframes flySpace {
+    0% {
+        transform: translateX(-150vw) scale(0.3);
         opacity: 0;
     }
 
+    60% {
+        transform: translateX(0) scale(1.15);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(0) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes twinkle {
+    from {
+        opacity: 0.5;
+    }
     to {
-        transform: translateX(0);
         opacity: 1;
     }
 }
