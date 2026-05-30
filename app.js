@@ -1,3 +1,12 @@
+window.addEventListener("load", () => {
+    setTimeout(() => {
+        const welcomeScreen = document.getElementById("welcome-screen");
+        if (welcomeScreen) {
+            welcomeScreen.style.display = "none";
+        }
+    }, 4000);
+});
+
 /* ==========================================================================
    FUTURISTIC ECE PORTFOLIO INTERACTION LOGIC (AISHWARYA L)
    ========================================================================== */
